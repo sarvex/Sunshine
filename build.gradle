@@ -3,6 +3,8 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
+        mavenLocal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.1.+'
@@ -19,13 +21,7 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+        mavenLocal()
         maven { url "https://clojars.org/repo/" }
-
-
-    }
-
-    configurations {
-        all*.exclude 'org.apache.httpcomponents:httpclient:4.0.3'
-        all*.exclude 'commons-logging:commons-logging:1.1.1'
     }
 }
