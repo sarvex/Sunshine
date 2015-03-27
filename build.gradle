@@ -20,5 +20,12 @@ allprojects {
         jcenter()
         mavenCentral()
         maven { url "https://clojars.org/repo/" }
+
+
+    }
+
+    configurations {
+        all*.exclude 'org.apache.httpcomponents:httpclient:4.0.3'
+        all*.exclude 'commons-logging:commons-logging:1.1.1'
     }
 }
