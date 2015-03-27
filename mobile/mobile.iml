@@ -131,8 +131,8 @@
     <orderEntry type="library" exported="" name="play-services-safetynet-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="quoin-0.1.2" level="project" />
     <orderEntry type="library" exported="" name="play-services-nearby-7.0.0" level="project" />
-    <orderEntry type="library" exported="" name="kotlin-stdlib-0.11.91" level="project" />
     <orderEntry type="library" exported="" name="scout-0.1.0" level="project" />
+    <orderEntry type="library" exported="" name="kotlin-stdlib-0.11.91" level="project" />
     <orderEntry type="library" exported="" name="play-services-fitness-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="aspectjrt-1.8.5" level="project" />
     <orderEntry type="library" exported="" name="kotlin-runtime-0.11.91" level="project" />
