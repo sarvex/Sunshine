@@ -9,13 +9,13 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        testInstrumentationRunner "android.support.multidex.MultiDexTestRunner"
         applicationId "com.jatasra.sarvex.sunshine"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+        testInstrumentationRunner "android.support.multidex.MultiDexTestRunner"
     }
     buildTypes {
         release {
