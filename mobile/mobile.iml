@@ -91,8 +91,8 @@
     <orderEntry type="library" exported="" name="hugo-annotations-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-drive-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="gson-2.3.1" level="project" />
-    <orderEntry type="library" exported="" name="commons-io-2.4" level="project" />
     <orderEntry type="library" exported="" name="icepick-3.0.2" level="project" />
+    <orderEntry type="library" exported="" name="commons-io-2.4" level="project" />
     <orderEntry type="library" exported="" name="parceler-0.2.16" level="project" />
     <orderEntry type="library" exported="" name="parceler-api-0.2.16" level="project" />
     <orderEntry type="library" exported="" name="play-services-wearable-7.0.0" level="project" />
@@ -113,8 +113,8 @@
     <orderEntry type="library" exported="" name="auto-service-1.0-rc2" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="stencil-0.3.5" level="project" />
-    <orderEntry type="library" exported="" name="clojure-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="signpost-core-1.2.1.2" level="project" />
+    <orderEntry type="library" exported="" name="clojure-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-analytics-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="android-form-edittext-1.1.0" level="project" />
     <orderEntry type="library" exported="" name="velocity-1.7" level="project" />

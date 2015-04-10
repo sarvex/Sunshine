@@ -12,9 +12,9 @@
     android:paddingTop="16dp"
     tools:context="com.jatasra.sarvex.sunshine.MainActivity.PlaceholderFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello, World!"/>
+    <ListView
+        android:id="@+id/listview_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>
