@@ -34,6 +34,17 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
 }
 
 apt {
@@ -63,11 +74,6 @@ dependencies {
     compile group: 'com.android.support', name: 'multidex', version: '1.0.0'
     compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
     compile group: 'com.google.guava', name: 'guava', version: '18.0'
-
-    apt group: 'org.androidannotations', name: 'androidannotations', version: '3.2'
-    compile group: "org.androidannotations", name: 'androidannotations-api', version: '3.2'
-    compile group: 'org.roboguice', name: 'roboguice', version: '3.0.1'
-    provided group: 'org.roboguice', name: 'roboblender', version: '3.0.1'
     compile group: 'org.slf4j', name: 'slf4j-android', version: '1.7.10'
     compile group: 'com.jakewharton', name: 'disklrucache', version: '2.0.2'
     compile group: 'com.jakewharton', name: 'butterknife', version: '6.1.0'
@@ -82,9 +88,18 @@ dependencies {
     compile group: 'com.andreabaccega', name: 'android-form-edittext', version: '1.1.0'
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '0.11.91.1'
 
-    compile group: 'oauth.signpost', name: 'signpost-core', version: '1.2.1.2'
-    compile group: 'oauth.signpost', name: 'signpost-commonshttp4', version: '1.2.1.2'
-    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    apt group: 'org.androidannotations', name: 'androidannotations', version: '3.2'
+    compile group: "org.androidannotations", name: 'androidannotations-api', version: '3.2'
+    compile(group: 'org.roboguice', name: 'roboguice', version: '3.0.1') {
+        exclude module: 'aopalliance'
+        exclude module: 'cglib'
+    }
+    provided group: 'org.roboguice', name: 'roboblender', version: '3.0.1'
+    compile(group: 'com.google.inject.extensions', name: 'guice-assistedinject', version: '4.0-beta5') {
+        exclude module: 'aopalliance'
+        exclude module: 'guice'
+        exclude module: 'cglib'
+    }
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.robolectric', name: 'robolectric', version: '2.4'

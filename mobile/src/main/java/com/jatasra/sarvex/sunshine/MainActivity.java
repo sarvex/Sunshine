@@ -3,6 +3,7 @@ package com.jatasra.sarvex.sunshine;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,12 +12,22 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static final Logger LOG = LoggerFactory.getLogger(MainActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +91,52 @@ public class MainActivity extends ActionBarActivity {
 
             ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
             listView.setAdapter(forecastAdapter);
+
+            HttpURLConnection urlConnection = null;
+            BufferedReader reader = null;
+            String response = null;
+
+            try {
+                URL url = new URL("http://api.openweathermap.org/data/2.5/forecast/daily?q=Gurgaon,in&units=metric&cnt=16");
+
+                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestMethod("GET");
+                urlConnection.connect();
+
+                InputStream inputStream = urlConnection.getInputStream();
+                StringBuilder buffer = new StringBuilder();
+                if (inputStream == null) {
+                    return null;
+                }
+
+                reader = new BufferedReader(new InputStreamReader(inputStream));
+
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    buffer.append(line).append("\n");
+                }
+
+                if (buffer.length() == 0) {
+                    return null;
+                }
+                response = buffer.toString();
+
+            } catch (IOException exception) {
+                LOG.error("PlaceholderFragment", "Error ", exception);
+                return null;
+
+            } finally {
+                if (urlConnection != null) {
+                    urlConnection.disconnect();
+                }
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (final IOException exception) {
+                        Log.e("PlaceholderFragment", "Error closing stream", exception);
+                    }
+                }
+            }
 
             return rootView;
         }
