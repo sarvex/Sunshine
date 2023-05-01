@@ -95,7 +95,7 @@ dependencies {
         exclude module: 'cglib'
     }
     provided group: 'org.roboguice', name: 'roboblender', version: '3.0.1'
-    compile(group: 'com.google.inject.extensions', name: 'guice-assistedinject', version: '4.0-beta5') {
+    compile(group: 'com.google.inject.extensions', name: 'guice-assistedinject', version: '4.2.3') {
         exclude module: 'aopalliance'
         exclude module: 'guice'
         exclude module: 'cglib'
