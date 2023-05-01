@@ -104,7 +104,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.robolectric', name: 'robolectric', version: '2.4'
     testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
-    testCompile group: 'com.jayway.android.robotium', name: 'robotium-solo', version: '5.2.1'
+    testCompile group: 'com.jayway.android.robotium', name: 'robotium-solo', version: '5.6.3'
     testCompile group: 'com.android.support', name: 'multidex-instrumentation', version: '1.0.0'
     testCompile group: 'com.google.dexmaker', name: 'dexmaker', version: '1.0'
     testCompile group: 'com.google.dexmaker', name: 'dexmaker-mockito', version: '1.0'
