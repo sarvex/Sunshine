@@ -84,7 +84,7 @@ dependencies {
     compile group: 'org.parceler', name: 'parceler-api', version: '0.2.16'
     provided group: 'org.parceler', name: 'parceler', version: '0.2.16'
     compile group: 'frankiesardo', name: 'icepick', version: '3.2.0'
-    provided group: 'frankiesardo', name: 'icepick-processor', version: '3.0.2'
+    provided group: 'frankiesardo', name: 'icepick-processor', version: '3.2.0'
     compile group: 'com.andreabaccega', name: 'android-form-edittext', version: '1.1.0'
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '0.11.91.1'
 
