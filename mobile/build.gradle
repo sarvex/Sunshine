@@ -86,7 +86,7 @@ dependencies {
     compile group: 'frankiesardo', name: 'icepick', version: '3.2.0'
     provided group: 'frankiesardo', name: 'icepick-processor', version: '3.2.0'
     compile group: 'com.andreabaccega', name: 'android-form-edittext', version: '1.2.1'
-    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '0.11.91.1'
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '0.14.451'
 
     apt group: 'org.androidannotations', name: 'androidannotations', version: '3.3.2'
     compile group: "org.androidannotations", name: 'androidannotations-api', version: '3.2'
