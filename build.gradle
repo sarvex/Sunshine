@@ -9,7 +9,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:1.1.+'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.14.451'
         classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
-        classpath 'org.robolectric:robolectric-gradle-plugin:1.0.1'
+        classpath 'org.robolectric:robolectric-gradle-plugin:1.1.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
