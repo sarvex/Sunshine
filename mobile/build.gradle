@@ -89,7 +89,7 @@ dependencies {
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.8.21'
 
     apt group: 'org.androidannotations', name: 'androidannotations', version: '4.8.0'
-    compile group: "org.androidannotations", name: 'androidannotations-api', version: '3.2'
+    compile group: "org.androidannotations", name: 'androidannotations-api', version: '4.8.0'
     compile(group: 'org.roboguice', name: 'roboguice', version: '4.0.0') {
         exclude module: 'aopalliance'
         exclude module: 'cglib'
